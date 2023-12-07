@@ -9,7 +9,7 @@
 
 ✚ This plugin enables you to build multiple sets of documentation in a single Mkdocs. It is designed to address writing documentation in Spotify's largest and most business-critical codebases (typically monoliths or monorepos).
 
-✏️ [Blog Post](https://labs.spotify.com/2019/10/01/solving-documentation-for-monoliths-and-monorepos/) | 🐍 [Python Package](https://pypi.org/project/mkdocs-monorepo-plugin/) | ✚ [Demo](https://spotify.github.io/mkdocs-monorepo-plugin/monorepo-example/) | 📕 [Docs](https://spotify.github.io/mkdocs-monorepo-plugin/)
+✏️ [Blog Post](https://labs.spotify.com/2019/10/01/solving-documentation-for-monoliths-and-monorepos/) | 🐍 [Python Package](https://pypi.org/project/mkdocs-monorepo-plugin/) | ✚ [Demo](https://backstage.github.io/mkdocs-monorepo-plugin/monorepo-example/) | 📕 [Docs](https://backstage.github.io/mkdocs-monorepo-plugin/)
 
 ## Features
 
@@ -26,7 +26,7 @@
 It's easy to get started using [PyPI] and `pip` using Python:
 
 ```terminal
-$ pip install mkdocs-monorepo-plugin
+pip install mkdocs-monorepo-plugin
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ Take a look at [our sample project](https://github.com/backstage/mkdocs-monorepo
 - Back in in the root `mkdocs.yml`, use the `!include` syntax in your `nav` to link to to a subfolder `mkdocs.yml`
 
 !!! info "Example root /mkdocs.yml"
-            
+
             site_name: Cats API
 
             # You can declare "!include" statements here. This enables you
@@ -62,8 +62,8 @@ Take a look at [our sample project](https://github.com/backstage/mkdocs-monorepo
             # this with the root documentation. It should refer to a folder structure.
             # The example below will merge documentation as following:
             #
-            #   reference.md -> docs/versions/v1/reference.md -> http://localhost:8000/versions/v1/reference/
-            #   changelog.md -> docs/versions/v1/changelog.md -> http://localhost:8000/versions/v1/changelog/
+            #   reference.md -> docs/versions/v1/reference.md -> <http://localhost:8000/versions/v1/reference/>
+            #   changelog.md -> docs/versions/v1/changelog.md -> <http://localhost:8000/versions/v1/changelog/>
             #
 
             site_name: versions/v1
@@ -76,7 +76,7 @@ Take a look at [our sample project](https://github.com/backstage/mkdocs-monorepo
               - code-samples.md
 
 !!! info "Example submodule /v2/mkdocs.yml"
-            
+
             # It works the same as above, but with relative to the site_name we use here:
             #
             #   migrating.md -> docs/versions/v2/migrating.md -> http://localhost:8000/versions/v2/migrating/
